@@ -90,7 +90,7 @@ pub trait AsRawIRC {
 /// See [RFC 2812, section 2.3.1](https://tools.ietf.org/html/rfc2812#section-2.3.1)
 /// for the message format that this is based on.
 /// Further, this implements [IRCv3 tags](https://ircv3.net/specs/extensions/message-tags.html).
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq, Default)]
 #[cfg_attr(feature = "with-serde", derive(Serialize, Deserialize))]
 pub struct IRCMessage {
     /// A map of additional key-value tags on this message.

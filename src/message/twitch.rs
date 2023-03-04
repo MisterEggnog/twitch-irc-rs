@@ -7,7 +7,7 @@ use std::ops::Range;
 use {serde::Deserialize, serde::Serialize};
 
 /// Set of information describing the basic details of a Twitch user.
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq, Default)]
 #[cfg_attr(feature = "with-serde", derive(Serialize, Deserialize))]
 pub struct TwitchUserBasics {
     /// The user's unique ID, e.g. `103973901`
